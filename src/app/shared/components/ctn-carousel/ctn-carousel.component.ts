@@ -27,7 +27,7 @@ export class CtnCarouselComponent implements OnInit, OnDestroy {
   private delay = 3000;
   private resizeObservable$: Observable<Event>;
   private subscription$: Subscription = new Subscription();
-  private interval: NodeJS.Timer | undefined;
+  private interval: any;
 
   constructor() {
     this.resizeObservable$ = fromEvent(window, 'resize');
