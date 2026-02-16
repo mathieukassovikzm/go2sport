@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "go2sport:build:production"
+              "buildTarget": "go2sport:build:production"
             },
             "development": {
-              "browserTarget": "go2sport:build:development"
+              "buildTarget": "go2sport:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "go2sport:build"
+            "buildTarget": "go2sport:build"
           }
         },
         "test": {
