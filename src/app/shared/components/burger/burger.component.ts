@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { UiService } from 'src/app/services/ui.service';
 
@@ -5,12 +6,14 @@ import { UiService } from 'src/app/services/ui.service';
   selector: 'app-burger',
   templateUrl: './burger.component.html',
   styleUrls: ['./burger.component.scss'],
+  imports: [CommonModule],
+  standalone: true
 })
 export class BurgerComponent implements OnInit {
   @HostBinding('class') class = 'component-burger';
-  constructor(public uiService: UiService) {}
+  constructor(public uiService: UiService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   burgerClicked(): void {
     this.uiService.toggleNav();

@@ -1,5 +1,5 @@
-@import "_variables-dir";
-@import "_mixins-dir";
+@use '_variables-dir' as *;
+@use '_mixins-dir' as mixins;
 
 /**----------------------------- Section A propos -----------------------------**/
 $s-about-txt-padding-tb: 20px !default;
@@ -65,7 +65,7 @@ $s-about-drop-shadow-color: $drop-shadow-color !default;
 
       .about-elt {
         &.elt-banner {
-          @include bkgGradient($url: "/assets/img/section-about/About-PhotoBanner-v.jpg",
+          @include mixins.bkgGradient($url: "/assets/img/section-about/About-PhotoBanner-v.jpg",
             $color1: transparent,
             $color1Stop: 25%,
             $color2: rgba($c-primary, 0.7),
@@ -143,7 +143,7 @@ $s-about-drop-shadow-color: $drop-shadow-color !default;
     .section-about {
       .ctn-banner {
         .about-elt.elt-banner {
-          @include bkgGradient($url: "/assets/img/section-about/About-PhotoBanner-h.jpg",
+          @include mixins.bkgGradient($url: "/assets/img/section-about/About-PhotoBanner-h.jpg",
             $color1: transparent,
             $color1Stop: 25%,
             $color2: rgba($c-primary, 0.7),

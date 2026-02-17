@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
 
@@ -5,13 +6,15 @@ import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
   selector: 'app-carousel-slide',
   templateUrl: './carousel-slide.component.html',
   styleUrls: ['./carousel-slide.component.scss'],
+  imports: [CommonModule],
+  standalone: true
 })
 export class CarouselSlideComponent implements OnInit {
   @Input() dataSlide: ICarouselSlideModel = {};
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   getImgSrc(): string {
     return `/assets/img/section-trust/${this.dataSlide.logo}`;

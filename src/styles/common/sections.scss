@@ -1,16 +1,18 @@
+@use "./../variables/variables-dir" as _variables;
+
 section,
 .section {
   margin: 0;
-  padding-bottom: $section-padding-tb;
-  padding-left: $section-padding-lr;
-  padding-right: $section-padding-lr;
+  padding-bottom: _variables.$section-padding-tb;
+  padding-left: _variables.$section-padding-lr;
+  padding-right: _variables.$section-padding-lr;
 
   .section-container {
     width: 100%;
-    padding: $section-container-padding-tb $section-container-padding-lr;
+    padding: _variables.$section-container-padding-tb _variables.$section-container-padding-lr;
   }
 
-  @media only screen and (min-width: $min-width-m) {
+  @media only screen and (min-width: _variables.$min-width-m) {
     .section-container {
       width: 75%;
       margin: auto;
@@ -19,10 +21,10 @@ section,
 }
 
 .light-background {
-  background-color: $c-background-light;
-  color: $c-text-dark;
+  background-color: _variables.$c-background-light;
+  color: _variables.$c-text-dark;
 }
 .dark-background {
-  background-color: $c-background-dark;
-  color: $c-text-light;
+  background-color: _variables.$c-background-dark;
+  color: _variables.$c-text-light;
 }

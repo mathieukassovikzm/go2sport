@@ -1,6 +1,6 @@
-@import "_variables-dir";
-@import "_common-dir";
-@import '_mixins-dir';
+@use '_variables-dir' as *;
+@use '_common-dir';
+@use '_mixins-dir' as mixins;
 
 $value-scale: 1.1 !default;
 $value-icon-size: 100px !default;
@@ -37,7 +37,7 @@ $value-icon-size: 100px !default;
           position: absolute;
           width: $value-icon-size;
           height: $value-icon-size;
-          @include svg;
+          @include mixins.svg;
         }
       }
     }
@@ -47,7 +47,7 @@ $value-icon-size: 100px !default;
 
       .value-icon-icon {
         ::ng-deep {
-          @include svg-hover;
+          @include mixins.svg-hover;
         }
       }
     }

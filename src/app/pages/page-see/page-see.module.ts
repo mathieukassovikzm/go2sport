@@ -11,18 +11,18 @@ import { SeeFormulesModule } from './see-formules/see-formules.module';
 import { SeeTitresNavSvgModule } from './see-titres-nav-svg/see-titres-nav-svg.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    PageSeeRoutingModule,
-    SectionIntroModule,
-    SeeActiviteesModule,
-    SeeFormulesModule,
-    SeeBienfaitsModule,
-    SectionTrustModule,
-    SeeTitresNavSvgModule,
-    FooterModule
-  ],
-  exports: [PageSeeComponent],
-  declarations: [PageSeeComponent],
+    imports: [
+        CommonModule,
+        PageSeeRoutingModule,
+        SectionIntroModule,
+        SeeActiviteesModule,
+        SeeFormulesModule,
+        SeeBienfaitsModule,
+        SectionTrustModule,
+        SeeTitresNavSvgModule,
+        FooterModule,
+        PageSeeComponent
+    ],
+    exports: [PageSeeComponent],
 })
 export class PageSeeModule { }

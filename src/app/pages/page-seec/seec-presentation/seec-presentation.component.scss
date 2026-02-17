@@ -1,4 +1,4 @@
-@import "_variables-dir";
+@use '_variables-dir' as *;
 
 $seec-pres-bloc-margin-b: 60px;
 $seec-pres-bloc-title-b: 40px;

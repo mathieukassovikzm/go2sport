@@ -1,6 +1,6 @@
-@import "variables-dir";
-@import 'mixins-dir';
-@import 'functions';
+@use '_variables-dir' as *;
+@use 'mixins-dir' as _mixins;
+@use 'functions';
 
 /*******************************
  * Variables Footer
@@ -58,7 +58,7 @@ $footer-img-width: 250px !default;
 
         .icon {
           width: 30px;
-          @include svg($color: $footer-txt-color);
+          @include _mixins.svg($color: $footer-txt-color);
         }
 
         p {
@@ -93,7 +93,7 @@ $footer-img-width: 250px !default;
         a {
           color: $footer-txt-color;
           text-align: center;
-          font-size: rem(25);
+          font-size: functions.rem(25);
           transition: color ease $animation-duration-short;
 
           &:hover {
@@ -138,7 +138,7 @@ $footer-img-width: 250px !default;
 
           a {
             margin: 0 30px;
-            font-size: rem(30);
+            font-size: functions.rem(30);
           }
         }
       }

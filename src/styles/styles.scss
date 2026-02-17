@@ -1,8 +1,7 @@
-@import 'compass-mixins';
-@import '_functions';
-@import './variables/variables-dir';
-@import './mixins/mixins-dir';
-@import './common/common-dir';
+@use '_functions';
+@use './variables/variables-dir';
+@use './mixins/mixins-dir';
+@use './common/common-dir';
 
 * {
   margin: 0;

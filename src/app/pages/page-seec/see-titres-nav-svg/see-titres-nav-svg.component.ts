@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { IPageNavModel } from 'src/app/models/pageNav';
 import { SeecService } from 'src/app/services/seec.service';
+import { ListTitleNavSvgComponent } from '../../../shared/components/list-title-nav-svg/list-title-nav-svg.component';
+import { SectionTitleSimpleComponent } from '../../../shared/components/section-title/section-title-simple/section-title-simple.component';
 
 @Component({
   selector: 'app-see-titres-nav-svg',
   templateUrl: './see-titres-nav-svg.component.html',
+  imports: [SectionTitleSimpleComponent, ListTitleNavSvgComponent],
+  standalone: true,
 })
 export class SeeTitresNavSvgComponent implements OnInit {
   public listTitle: IPageNavModel[] = [];
@@ -12,5 +16,5 @@ export class SeeTitresNavSvgComponent implements OnInit {
     this.listTitle = this.seecService.listTitle;
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

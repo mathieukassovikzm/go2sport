@@ -3,8 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SvgFacebookComponent } from './svg-facebook.component';
 
 @NgModule({
-  imports: [CommonModule],
-  exports: [SvgFacebookComponent],
-  declarations: [SvgFacebookComponent],
+    imports: [CommonModule, SvgFacebookComponent],
+    exports: [SvgFacebookComponent],
 })
 export class SvgFacebookModule {}

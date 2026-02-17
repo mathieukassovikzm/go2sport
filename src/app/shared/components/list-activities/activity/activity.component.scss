@@ -1,6 +1,6 @@
-@import "_variables-dir";
-@import "_functions";
-@import "mixins-dir";
+@use '_variables-dir' as *;
+@use '_functions';
+@use '_mixins-dir' as _mixins;
 
 :host {
   .ctn-vignette {
@@ -26,7 +26,7 @@
           .icon-svg {
             display: block;
             height: $see-icon-size;
-            @include svg($color: $c-primary);
+            @include _mixins.svg($color: $c-primary);
           }
         }
       }
@@ -109,7 +109,7 @@
 
         .activity-logo ::ng-deep {
           .icon-svg {
-            @include svg-hover;
+            @include _mixins.svg-hover;
           }
         }
       }

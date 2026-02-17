@@ -1,5 +1,5 @@
-@import "_variables-dir";
-@import "_functions";
+@use '_variables-dir' as *;
+@use '_functions';
 
 :host {
   .fake-elt {

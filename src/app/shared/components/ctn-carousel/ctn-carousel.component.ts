@@ -1,15 +1,18 @@
+import { AnimationEvent } from '@angular/animations';
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import * as _ from 'lodash';
 import { fromEvent, Observable, Subject, Subscription } from 'rxjs';
 import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
 import { animationMultipleCarousel } from './animation';
-import { AnimationEvent } from '@angular/animations';
+import { CarouselSlideComponent } from './carousel-slide/carousel-slide.component';
 
 @Component({
   selector: 'app-ctn-carousel',
   templateUrl: './ctn-carousel.component.html',
   styleUrls: ['./ctn-carousel.component.scss'],
   animations: [animationMultipleCarousel],
+  imports: [CommonModule, CarouselSlideComponent],
+  standalone: true,
 })
 export class CtnCarouselComponent implements OnInit, OnDestroy {
   @Input() slides: ICarouselSlideModel[] = [];

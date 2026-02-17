@@ -1,4 +1,4 @@
-@import "_variables-dir";
+@use '_variables-dir' as *;
 
 $dotted-line-dot-size: 8px !default;
 $dotted-line-dot-stroke-width: 25 !default;
