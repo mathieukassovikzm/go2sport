@@ -70,7 +70,7 @@ $ispp-bar-height: 2px !default;
           top: 90%;
           height: $ispp-bar-height;
           width: $ispp-bar-width;
-          left: (100% - $ispp-bar-width)/2;
+          left: calc((100% - $ispp-bar-width) / 2);
           background-color: $ispp-bar-color;
         }
       }
