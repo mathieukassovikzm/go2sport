@@ -1,74 +1,102 @@
 <div class="title-svg" (click)="goToSection()">
   <div class="list-svg list-svg-top">
-    <div class="title-svg-icon" *ngIf="isBienfaits()">
-      <app-svg-circle />
-      <app-svg-bien-etre />
-    </div>
-    <div class="title-svg-icon" *ngIf="isBienfaits()">
-      <app-svg-circle />
-      <app-svg-productivite />
-    </div>
+    @if (isBienfaits()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-bien-etre />
+      </div>
+    }
+    @if (isBienfaits()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-productivite />
+      </div>
+    }
 
-    <div class="title-svg-icon" *ngIf="isFormules()">
-      <app-svg-circle />
-      <app-svg-one-hour />
-    </div>
-    <div class="title-svg-icon" *ngIf="isFormules()">
-      <app-svg-circle />
-      <app-svg-materiel />
-    </div>
-    <div class="title-svg-icon" *ngIf="isActivites()">
-      <app-svg-circle />
-      <app-svg-fitness />
-    </div>
-    <div class="title-svg-icon" *ngIf="isActivites()">
-      <app-svg-circle />
-      <app-svg-combat />
-    </div>
-    <!--     
+    @if (isFormules()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-one-hour />
+      </div>
+    }
+    @if (isFormules()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-materiel />
+      </div>
+    }
+    @if (isActivites()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-fitness />
+      </div>
+    }
+    @if (isActivites()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-combat />
+      </div>
+    }
+    <!--
     <SvgFormation v-if="isFormation" />
     <SvgSuivi v-if="isSuivi" />
     <SvgCycles v-if="isAdaptation" /> -->
   </div>
   <div class="title">
     <app-dotted-line direction="left" />
-    <h4>{{titleSvg.title}}</h4>
+    <h4>{{titleSvg().title}}</h4>
     <app-dotted-line direction="right" />
   </div>
   <div class="list-svg list-svg-bottom">
-    <div class="title-svg-icon" *ngIf="isBienfaits()">
-      <app-svg-circle />
-      <app-svg-rentabilite />
-    </div>
-    <div class="title-svg-icon shifted" *ngIf="isBienfaits()">
-      <app-svg-circle />
-      <app-svg-entreprise />
-    </div>
-    <div class="title-svg-icon" *ngIf="isBienfaits()">
-      <app-svg-circle />
-      <app-svg-financier />
-    </div>
-    <div class="title-svg-icon" *ngIf="isFormules()">
-      <app-svg-circle />
-      <app-svg-deplacement />
-    </div>
-    <div class="title-svg-icon" *ngIf="isFormules()">
-      <app-svg-circle />
-      <app-svg-water />
-    </div>
-    <div class="title-svg-icon" *ngIf="isActivites()">
-      <app-svg-circle />
-      <app-svg-sport-co />
-    </div>
-    <div class="title-svg-icon shifted" *ngIf="isActivites()">
-      <app-svg-circle />
-      <app-svg-raquettes />
-    </div>
-    <div class="title-svg-icon" *ngIf="isActivites()">
-      <app-svg-circle />
-      <app-svg-outdoor />
-    </div>
-    <!--     
+    @if (isBienfaits()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-rentabilite />
+      </div>
+    }
+    @if (isBienfaits()) {
+      <div class="title-svg-icon shifted">
+        <app-svg-circle />
+        <app-svg-entreprise />
+      </div>
+    }
+    @if (isBienfaits()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-financier />
+      </div>
+    }
+    @if (isFormules()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-deplacement />
+      </div>
+    }
+    @if (isFormules()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-water />
+      </div>
+    }
+    @if (isActivites()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-sport-co />
+      </div>
+    }
+    @if (isActivites()) {
+      <div class="title-svg-icon shifted">
+        <app-svg-circle />
+        <app-svg-raquettes />
+      </div>
+    }
+    @if (isActivites()) {
+      <div class="title-svg-icon">
+        <app-svg-circle />
+        <app-svg-outdoor />
+      </div>
+    }
+    <!--
     <SvgFormation v-if="isFormation" />
     <SvgSuivi v-if="isSuivi" />
     <SvgCycles v-if="isAdaptation" /> -->

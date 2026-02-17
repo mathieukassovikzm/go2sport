@@ -1,5 +1,5 @@
-import { CommonModule, ViewportScroller } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
+import { Component, OnInit, input } from '@angular/core';
 import { IPageNavModel } from 'src/app/models/pageNav';
 import { UiService } from 'src/app/services/ui.service';
 import { SvgBienEtreComponent } from '../../../svg/svg-bien-etre/svg-bien-etre.component';
@@ -41,11 +41,11 @@ const svgs = [
   selector: 'app-title-nav-svg',
   templateUrl: './title-nav-svg.component.html',
   styleUrls: ['./title-nav-svg.component.scss'],
-  imports: [CommonModule, svgs],
+  imports: [svgs],
   standalone: true,
 })
 export class TitleNavSvgComponent implements OnInit {
-  @Input() titleSvg: IPageNavModel = {};
+  readonly titleSvg = input<IPageNavModel>({});
 
   constructor(
     private uiService: UiService,
@@ -55,16 +55,16 @@ export class TitleNavSvgComponent implements OnInit {
   ngOnInit() { }
 
   isBienfaits() {
-    return this.titleSvg.name == 'Bienfaits' ? true : false;
+    return this.titleSvg().name == 'Bienfaits' ? true : false;
   }
   isFormules() {
-    return this.titleSvg.name == 'Formules' ? true : false;
+    return this.titleSvg().name == 'Formules' ? true : false;
   }
   isActivites() {
-    return this.titleSvg.name == 'Activites' ? true : false;
+    return this.titleSvg().name == 'Activites' ? true : false;
   }
 
   goToSection() {
-    this.uiService.moveSlowToId(this.viewportScroller, `${this.titleSvg.link}`);
+    this.uiService.moveSlowToId(this.viewportScroller, `${this.titleSvg().link}`);
   }
 }

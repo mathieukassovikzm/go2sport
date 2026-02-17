@@ -1,21 +1,21 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+
+import { Component, OnInit, input } from '@angular/core';
 import { ITrustModel } from 'src/app/models/partner';
 
 @Component({
   selector: 'app-partner',
   templateUrl: './partner.component.html',
   styleUrls: ['./partner.component.scss'],
-  imports: [CommonModule],
+  imports: [],
   standalone: true
 })
 export class PartnerComponent implements OnInit {
-  @Input() partner: ITrustModel = {};
+  readonly partner = input<ITrustModel>({});
   constructor() { }
 
   ngOnInit() { }
 
   getImgSrc(): string {
-    return `/assets/img/section-trust/${this.partner.logo}`;
+    return `/assets/img/section-trust/${this.partner().logo}`;
   }
 }

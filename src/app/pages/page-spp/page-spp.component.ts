@@ -1,4 +1,4 @@
-import { NgFor } from '@angular/common';
+
 import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { SectionIntroComponent } from '../../shared/components/section-intro/section-intro.component';
@@ -16,7 +16,7 @@ const components = [
   selector: 'app-page-spp',
   templateUrl: './page-spp.component.html',
   styleUrls: ['./page-spp.component.scss'],
-  imports: [NgFor, ...components],
+  imports: [...components],
   standalone: true,
 })
 export class PageSppComponent implements OnInit {

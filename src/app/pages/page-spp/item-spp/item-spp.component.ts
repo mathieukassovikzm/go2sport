@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 
 @Component({
   selector: 'app-item-spp',
@@ -7,12 +7,12 @@ import { Component, Input, OnInit } from '@angular/core';
   standalone: true,
 })
 export class ItemSppComponent implements OnInit {
-  @Input() elementSpp: any;
+  readonly elementSpp = input<any>();
   constructor() { }
 
   ngOnInit() { }
 
   getClassImg(): string {
-    return `item-spp-img-ctn spp-elt-${this.elementSpp.name}`;
+    return `item-spp-img-ctn spp-elt-${this.elementSpp().name}`;
   }
 }

@@ -1,16 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
+import { Component, OnInit, output } from '@angular/core';
 import { SvgArrowsComponent } from '../../svg/svg-arrows/svg-arrows.component';
 
 @Component({
   selector: 'app-btn-cartoon',
   templateUrl: './btn-cartoon.component.html',
   styleUrls: ['./btn-cartoon.component.scss'],
-  imports: [CommonModule, SvgArrowsComponent],
+  imports: [SvgArrowsComponent],
   standalone: true
 })
 export class BtnCartoonComponent implements OnInit {
-  @Output() btnClicked = new EventEmitter<string>();
+  readonly btnClicked = output<string>();
 
   constructor() { }
 

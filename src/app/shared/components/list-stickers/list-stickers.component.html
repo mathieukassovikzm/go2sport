@@ -1,5 +1,7 @@
 <div class="list-stickers">
-  <div *ngFor="let sticker of listOfStickers" class="sticker">
-    <app-sticker [sticker]="sticker"></app-sticker>
-  </div>
+  @for (sticker of listOfStickers(); track sticker) {
+    <div class="sticker">
+      <app-sticker [sticker]="sticker"></app-sticker>
+    </div>
+  }
 </div>

@@ -1,5 +1,7 @@
 <div class="list-partners">
-  <div *ngFor="let partner of listOfPartners">
-    <app-partner [partner]="partner"></app-partner>
-  </div>
+  @for (partner of listOfPartners(); track partner) {
+    <div>
+      <app-partner [partner]="partner"></app-partner>
+    </div>
+  }
 </div>

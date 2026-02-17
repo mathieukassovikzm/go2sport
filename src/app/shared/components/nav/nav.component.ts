@@ -1,4 +1,4 @@
-import { CommonModule, ViewportScroller } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import * as _ from 'lodash';
@@ -10,7 +10,7 @@ import { UiService } from 'src/app/services/ui.service';
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
-  imports: [CommonModule, RouterModule],
+  imports: [RouterModule],
   standalone: true
 })
 export class NavComponent implements OnInit, OnDestroy {
