@@ -1,9 +1,23 @@
+import { NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FooterComponent } from '../../shared/components/footer/footer.component';
+import { SectionIntroComponent } from '../../shared/components/section-intro/section-intro.component';
+import { SectionTitleSimpleComponent } from '../../shared/components/section-title/section-title-simple/section-title-simple.component';
+import { ItemSppComponent } from './item-spp/item-spp.component';
+
+const components = [
+  SectionIntroComponent,
+  SectionTitleSimpleComponent,
+  ItemSppComponent,
+  FooterComponent
+];
 
 @Component({
   selector: 'app-page-spp',
   templateUrl: './page-spp.component.html',
   styleUrls: ['./page-spp.component.scss'],
+  imports: [NgFor, ...components],
+  standalone: true,
 })
 export class PageSppComponent implements OnInit {
   public elements = [
@@ -35,7 +49,7 @@ export class PageSppComponent implements OnInit {
     link: 'spp',
   };
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

@@ -1,10 +1,12 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
-import { ViewportScroller } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import * as _ from 'lodash';
 import { Observable, Subscription } from 'rxjs';
 import { IPageInfos, RoutesNames } from 'src/app/models/routes';
 import { UiService } from 'src/app/services/ui.service';
+import { BurgerComponent } from '../burger/burger.component';
 import { SidebarCloseAnimation, SidebarOpenAnimation } from './animation';
 
 const animationParams = {
@@ -35,6 +37,8 @@ const animationParams = {
       ]),
     ]),
   ],
+  imports: [CommonModule, RouterModule, BurgerComponent],
+  standalone: true
 })
 export class NavResponsiveComponent implements OnInit, OnDestroy {
   public pageHome = RoutesNames.PageHome;

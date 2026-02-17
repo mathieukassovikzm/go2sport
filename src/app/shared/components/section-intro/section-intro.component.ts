@@ -1,11 +1,14 @@
-import { ViewportScroller } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { UiService } from 'src/app/services/ui.service';
+import { BtnCartoonComponent } from '../btn-cartoon/btn-cartoon.component';
 
 @Component({
   selector: 'app-section-intro',
   templateUrl: './section-intro.component.html',
   styleUrls: ['./section-intro.component.scss'],
+  imports: [CommonModule, BtnCartoonComponent],
+  standalone: true,
 })
 export class SectionIntroComponent implements OnInit, AfterViewInit {
   @Input() titleInfos: any;
@@ -13,11 +16,11 @@ export class SectionIntroComponent implements OnInit, AfterViewInit {
   constructor(
     private uiService: UiService,
     private viewportScroller: ViewportScroller
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  ngAfterViewInit() {}
+  ngAfterViewInit() { }
 
   goToLink() {
     this.uiService.moveSlowToId(

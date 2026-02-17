@@ -1,10 +1,26 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { IActivityModel } from 'src/app/models/activity';
+import { SvgCombatComponent } from '../../../svg/svg-combat/svg-combat.component';
+import { SvgFitnessComponent } from '../../../svg/svg-fitness/svg-fitness.component';
+import { SvgOutdoorComponent } from '../../../svg/svg-outdoor/svg-outdoor.component';
+import { SvgRaquettesComponent } from '../../../svg/svg-raquettes/svg-raquettes.component';
+import { SvgSportCoComponent } from '../../../svg/svg-sport-co/svg-sport-co.component';
+
+const svgs = [
+  SvgFitnessComponent,
+  SvgCombatComponent,
+  SvgSportCoComponent,
+  SvgRaquettesComponent,
+  SvgOutdoorComponent,
+];
 
 @Component({
   selector: 'app-activity',
   templateUrl: './activity.component.html',
   styleUrls: ['./activity.component.scss'],
+  imports: [CommonModule, svgs],
+  standalone: true
 })
 export class ActivityComponent implements OnInit {
   @Input() activity: IActivityModel = {};
@@ -16,9 +32,9 @@ export class ActivityComponent implements OnInit {
     this.ctnVignettes = document.getElementsByClassName('ctn-vignette');
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  onResize() {}
+  onResize() { }
 
   calcHeight(): string {
     return `${this.ctnVignettes[0].clientWidth / 2}px`;

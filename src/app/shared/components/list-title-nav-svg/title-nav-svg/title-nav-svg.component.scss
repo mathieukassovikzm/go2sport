@@ -1,5 +1,5 @@
-@import "_variables-dir";
-@import "_mixins-dir";
+@use '_variables-dir' as *;
+@use '_mixins-dir' as _mixins;
 
 $title-svg-color: 50px !default;
 $title-svg-icon-top: 40px !default;
@@ -8,6 +8,7 @@ $title-svg-padding-lr: 50px !default;
 $title-svg-icon-size: 50px !default;
 $title-svg-scale: 1.1 !default;
 $title-svg-scale-hover: 1.03 !default;
+
 $title-svg-title-margin-tb: 15px !default;
 
 :host {
@@ -35,7 +36,7 @@ $title-svg-title-margin-tb: 15px !default;
             transform: translateX(-50%) translateY(-50%);
             width: $title-svg-icon-size;
             height: $title-svg-icon-size;
-            @include svg;
+            @include _mixins.svg;
           }
         }
 
@@ -91,7 +92,7 @@ $title-svg-title-margin-tb: 15px !default;
       transform: scale($title-svg-scale-hover);
 
       .list-svg .title-svg-icon ::ng-deep .icon {
-        @include svg-hover;
+        @include _mixins.svg-hover;
       }
 
       .title {

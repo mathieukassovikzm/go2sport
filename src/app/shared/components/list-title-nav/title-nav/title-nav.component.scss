@@ -1,5 +1,5 @@
-@import "_variables-dir";
-@import "_mixins-dir";
+@use '_variables-dir' as *;
+@use '_mixins-dir' as mixins;
 
 $title-svg-color: 50px !default;
 $title-svg-icon-top: 40px !default;
@@ -35,7 +35,7 @@ $title-svg-title-margin-tb: 15px !default;
             transform: translateX(-50%) translateY(-50%);
             width: $title-svg-icon-size;
             height: $title-svg-icon-size;
-            @include svg;
+            @include mixins.svg;
           }
         }
 

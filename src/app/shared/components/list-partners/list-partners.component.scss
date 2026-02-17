@@ -1,4 +1,4 @@
-@import "_variables-dir";
+@use '_variables-dir' as *;
 
 :host {
   .list-partners {

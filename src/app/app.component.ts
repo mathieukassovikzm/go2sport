@@ -1,15 +1,25 @@
 import { AnimationEvent } from '@angular/animations';
 import { ViewportScroller } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { fromEvent, Observable, Subscription, tap } from 'rxjs';
 import { sliderAnimation } from './animation';
 import { UiService } from './services/ui.service';
+import { NavResponsiveComponent } from './shared/components/nav-responsive/nav-responsive.component';
+import { NavComponent } from './shared/components/nav/nav.component';
+
+const components = [
+  NavComponent,
+  NavResponsiveComponent,
+];
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [sliderAnimation],
+  imports: [RouterModule, ...components],
+  standalone: true
 })
 export class AppComponent implements OnInit, OnDestroy {
   public limiteSize = 650;

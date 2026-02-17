@@ -1,4 +1,4 @@
-@import "_variables-dir";
+@use '_variables-dir' as *;
 
 $btn-cartoon-anim-dur: $animation-duration !default;
 $btn-cartoon-skewX: 20deg !default;

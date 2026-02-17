@@ -1,4 +1,5 @@
-@import "_variables-dir";
+@use '_variables-dir' as *;
+@use 'sass:color';
 
 /*******************************
  * section-Intro
@@ -85,7 +86,7 @@ $intro-ctn-top: 48%;
         width: 100%;
 
         .triangle {
-          fill: transparentize($intro-bkg-color, 1-$intro-bkg-opacity);
+          fill: color.adjust($intro-bkg-color, $alpha: -(1-$intro-bkg-opacity));
 
           &.triangle-screen {
             display: none;

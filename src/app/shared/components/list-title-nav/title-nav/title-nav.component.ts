@@ -7,6 +7,7 @@ import { UiService } from 'src/app/services/ui.service';
   selector: 'app-title-nav',
   templateUrl: './title-nav.component.html',
   styleUrls: ['./title-nav.component.scss'],
+  standalone: true
 })
 export class TitleNavComponent implements OnInit {
   @Input() titleSvg: IPageNavModel = {};
@@ -14,9 +15,9 @@ export class TitleNavComponent implements OnInit {
   constructor(
     private uiService: UiService,
     private viewportScroller: ViewportScroller
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   isBienfaits() {
     return this.titleSvg.name == 'Bienfaits' ? true : false;

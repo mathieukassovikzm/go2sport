@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { UiService } from 'src/app/services/ui.service';
+import { SectionTitleSimpleComponent } from '../../../shared/components/section-title/section-title-simple/section-title-simple.component';
+import { ValueIconComponent } from './value-icon/value-icon.component';
 
 @Component({
   selector: 'app-section-g2s',
   templateUrl: './section-g2s.component.html',
   styleUrls: ['./section-g2s.component.scss'],
+  imports: [SectionTitleSimpleComponent, ValueIconComponent],
+  standalone: true,
 })
 export class SectionG2sComponent implements OnInit {
   public values = [
@@ -25,9 +29,9 @@ export class SectionG2sComponent implements OnInit {
       title: 'Convivialité',
     },
   ];
-  constructor(private uiService: UiService) {}
+  constructor(private uiService: UiService) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   isHover(valueName: string) {
     if (valueName === 'Solidarite') {

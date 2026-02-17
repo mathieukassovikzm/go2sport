@@ -1,4 +1,6 @@
-@mixin svg($color: $c-primary) {
+@use "./../variables/variables-dir" as variables;
+
+@mixin svg($color: variables.$c-primary) {
   &.icon-svg {
     path,
     circle,
@@ -15,7 +17,7 @@
   }
 }
 
-@mixin svg-hover($color: $c-primary, $color-hover: $c-secundary-light) {
+@mixin svg-hover($color: variables.$c-primary, $color-hover: variables.$c-secundary-light) {
   &.icon-svg {
     path,
     circle,

@@ -1,14 +1,16 @@
+@use "./../variables/variables-dir" as _variables;
+
 $svg-media-size: 40px !default;
 
 .svg-social {
   width: $svg-media-size;
   path {
-    fill: $c-secundary-light;
+    fill: _variables.$c-secundary-light;
   }
   circle {
-    stroke: $c-secundary-light;
+    stroke: _variables.$c-secundary-light;
     stroke-width: 6px;
-    transition: all $animation-duration-short ease;
+    transition: all _variables.$animation-duration-short ease;
 
     fill: transparent;
   }

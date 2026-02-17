@@ -1,5 +1,5 @@
-@import "_variables-dir";
-@import "_functions";
+@use '_variables-dir' as *;
+@use '_functions' as _functions;
 
 :host {
   .fake-elt {
@@ -97,7 +97,7 @@
         .nav-item {
           margin: 0 10px;
           letter-spacing: 0.01em;
-          font-size: rem(23);
+          font-size: _functions.rem(23);
         }
       }
     }

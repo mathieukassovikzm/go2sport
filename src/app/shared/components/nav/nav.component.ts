@@ -1,5 +1,6 @@
-import { ViewportScroller } from '@angular/common';
+import { CommonModule, ViewportScroller } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import * as _ from 'lodash';
 import { fromEvent, Observable, Subscription } from 'rxjs';
 import { IPageInfos, RoutesNames } from 'src/app/models/routes';
@@ -9,6 +10,8 @@ import { UiService } from 'src/app/services/ui.service';
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss'],
+  imports: [CommonModule, RouterModule],
+  standalone: true
 })
 export class NavComponent implements OnInit, OnDestroy {
   public pageHome = RoutesNames.PageHome;
@@ -43,7 +46,7 @@ export class NavComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ngOnDestroy() {
     this.scrollSubscription$.unsubscribe();

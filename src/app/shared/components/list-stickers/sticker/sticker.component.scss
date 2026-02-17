@@ -1,5 +1,5 @@
-@import "_variables-dir";
-@import "_mixins-dir";
+@use '_variables-dir' as *;
+@use '_mixins-dir' as _mixins;
 
 $sticker-color: $c-primary !default;
 $sticker-bkg-color: transparent !default;
@@ -38,7 +38,7 @@ $sticker-drop-shadow-color: rgba($c-background-dark, 0.16) !default;
           transform: translateX(-50%) translateY(-50%);
           width: $sticker-icon-size;
           height: $sticker-icon-size;
-          @include svg;
+          @include _mixins.svg;
         }
 
       }
@@ -57,7 +57,7 @@ $sticker-drop-shadow-color: rgba($c-background-dark, 0.16) !default;
       .sticker-icon {
         ::ng-deep {
           .icon {
-            @include svg-hover;
+            @include _mixins.svg-hover;
           }
         }
       }
