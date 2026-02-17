@@ -14,16 +14,28 @@
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": ["ES2022", "es5", "es6", "dom", "dom.iterable"],
+    "lib": [
+      "ES2022",
+      "es5",
+      "es6",
+      "dom",
+      "dom.iterable"
+    ],
     "paths": {
-      "@environments/*": ["./src/environments/*"],
-      "@assets/*": ["./src/assets/*"],
-      "@app/*": ["./src/app/*"]
+      "@environments/*": [
+        "./src/environments/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@app/*": [
+        "./src/app/*"
+      ]
     }
   },
   "angularCompilerOptions": {
