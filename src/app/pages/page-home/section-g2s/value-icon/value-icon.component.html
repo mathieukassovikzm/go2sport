@@ -4,8 +4,16 @@
   </div>
   <div class="value-icon-icon">
     <app-svg-circle />
-    <app-svg-solidarite *ngIf="isSolidarite()" />
-    <app-svg-partage *ngIf="isPartage()" />
-    <app-svg-tolerance *ngIf="isTolerance()" />
-    <app-svg-convivialite *ngIf="isConvivialite()" />
+    @if (isSolidarite()) {
+      <app-svg-solidarite />
+    }
+    @if (isPartage()) {
+      <app-svg-partage />
+    }
+    @if (isTolerance()) {
+      <app-svg-tolerance />
+    }
+    @if (isConvivialite()) {
+      <app-svg-convivialite />
+    }
   </div>

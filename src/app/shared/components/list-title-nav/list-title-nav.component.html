@@ -1,5 +1,7 @@
 <div class="list-titles-svg">
-  <div *ngFor="let titleSvg of listOfTitles">
-    <app-title-nav [titleSvg]="titleSvg"></app-title-nav>
-  </div>
+  @for (titleSvg of listOfTitles; track titleSvg) {
+    <div>
+      <app-title-nav [titleSvg]="titleSvg"></app-title-nav>
+    </div>
+  }
 </div>

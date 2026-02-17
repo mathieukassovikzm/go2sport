@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { RoutesNames } from 'src/app/models/routes';
@@ -21,7 +21,7 @@ const svgs = [
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss'],
-  imports: [CommonModule, svgs, RouterModule],
+  imports: [svgs, RouterModule],
   standalone: true
 })
 export class FooterComponent implements OnInit {

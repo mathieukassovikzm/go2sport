@@ -1,5 +1,5 @@
 import { transition, trigger, useAnimation } from '@angular/animations';
-import { CommonModule, ViewportScroller } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import * as _ from 'lodash';
@@ -37,7 +37,7 @@ const animationParams = {
       ]),
     ]),
   ],
-  imports: [CommonModule, RouterModule, BurgerComponent],
+  imports: [RouterModule, BurgerComponent],
   standalone: true
 })
 export class NavResponsiveComponent implements OnInit, OnDestroy {

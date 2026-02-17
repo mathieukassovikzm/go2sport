@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { UiService } from 'src/app/services/ui.service';
 
@@ -6,7 +6,7 @@ import { UiService } from 'src/app/services/ui.service';
   selector: 'app-burger',
   templateUrl: './burger.component.html',
   styleUrls: ['./burger.component.scss'],
-  imports: [CommonModule],
+  imports: [],
   standalone: true
 })
 export class BurgerComponent implements OnInit {

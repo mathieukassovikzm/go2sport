@@ -1,5 +1,5 @@
 import { AnimationEvent } from '@angular/animations';
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { fromEvent, Observable, Subject, Subscription } from 'rxjs';
 import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
@@ -11,7 +11,7 @@ import { CarouselSlideComponent } from './carousel-slide/carousel-slide.componen
   templateUrl: './ctn-carousel.component.html',
   styleUrls: ['./ctn-carousel.component.scss'],
   animations: [animationMultipleCarousel],
-  imports: [CommonModule, CarouselSlideComponent],
+  imports: [CarouselSlideComponent],
   standalone: true,
 })
 export class CtnCarouselComponent implements OnInit, OnDestroy {

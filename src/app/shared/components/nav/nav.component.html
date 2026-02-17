@@ -6,10 +6,12 @@
     </div>
   </div>
   <nav class="nav">
-    <div *ngFor="let navItem of lstPagesNav">
-      <a [routerLink]="navItem.route" class="nav-item" routerLinkActive="router-link-exact-active">
-        {{navItem.displayName}}
-      </a>
-    </div>
+    @for (navItem of lstPagesNav; track navItem) {
+      <div>
+        <a [routerLink]="navItem.route" class="nav-item" routerLinkActive="router-link-exact-active">
+          {{navItem.displayName}}
+        </a>
+      </div>
+    }
   </nav>
 </div>

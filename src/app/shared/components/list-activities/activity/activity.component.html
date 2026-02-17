@@ -1,12 +1,24 @@
 <div class="ctn-vignette">
   <div class="vignette-text-title">
     <div class="activity-logo">
-      <app-svg-fitness *ngIf="isFitness()" />
-      <app-svg-fitness *ngIf="isEntex()" />
-      <app-svg-combat *ngIf="isCombat()" />
-      <app-svg-sport-co *ngIf="isSportCo()" />
-      <app-svg-raquettes *ngIf="isRaquette()" />
-      <app-svg-outdoor *ngIf="isOutdoor()" />
+      @if (isFitness()) {
+        <app-svg-fitness />
+      }
+      @if (isEntex()) {
+        <app-svg-fitness />
+      }
+      @if (isCombat()) {
+        <app-svg-combat />
+      }
+      @if (isSportCo()) {
+        <app-svg-sport-co />
+      }
+      @if (isRaquette()) {
+        <app-svg-raquettes />
+      }
+      @if (isOutdoor()) {
+        <app-svg-outdoor />
+      }
     </div>
     <h5>{{activity.title}}</h5>
   </div>
@@ -14,11 +26,13 @@
   <div [class]="classVignette()" [style.height]="calcHeight()">
     <div class="vignette-text">
       <div class="txt-sports">
-        <div *ngFor="let sport of activity.sports">
-          <p class="small">{{sport.name}}</p>
-        </div>
+        @for (sport of activity.sports; track sport) {
+          <div>
+            <p class="small">{{sport.name}}</p>
+          </div>
+        }
       </div>
     </div>
   </div>
-  <!-- </transition> -->
+<!-- </transition> -->
 </div>

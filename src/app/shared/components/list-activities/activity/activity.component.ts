@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 import { IActivityModel } from 'src/app/models/activity';
 import { SvgCombatComponent } from '../../../svg/svg-combat/svg-combat.component';
@@ -19,7 +19,7 @@ const svgs = [
   selector: 'app-activity',
   templateUrl: './activity.component.html',
   styleUrls: ['./activity.component.scss'],
-  imports: [CommonModule, svgs],
+  imports: [svgs],
   standalone: true
 })
 export class ActivityComponent implements OnInit {

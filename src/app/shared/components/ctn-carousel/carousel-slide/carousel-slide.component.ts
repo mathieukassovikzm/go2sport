@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
 
@@ -6,7 +6,7 @@ import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
   selector: 'app-carousel-slide',
   templateUrl: './carousel-slide.component.html',
   styleUrls: ['./carousel-slide.component.scss'],
-  imports: [CommonModule],
+  imports: [],
   standalone: true
 })
 export class CarouselSlideComponent implements OnInit {

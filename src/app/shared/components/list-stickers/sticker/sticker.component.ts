@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IStickerModel } from 'src/app/models/sticker';
 import { SvgCircleComponent } from '../../../svg/svg-circle/svg-circle.component';
-import { NgIf, NgFor, CommonModule } from '@angular/common';
+
 import { SvgBienEtreComponent } from '../../../svg/svg-bien-etre/svg-bien-etre.component';
 import { SvgProductiviteComponent } from '../../../svg/svg-productivite/svg-productivite.component';
 import { SvgRentabiliteComponent } from '../../../svg/svg-rentabilite/svg-rentabilite.component';
@@ -35,7 +35,7 @@ var svgs = [
   selector: 'app-sticker',
   templateUrl: './sticker.component.html',
   styleUrls: ['./sticker.component.scss'],
-  imports: [CommonModule, svgs],
+  imports: [svgs],
   standalone: true
 })
 export class StickerComponent implements OnInit {

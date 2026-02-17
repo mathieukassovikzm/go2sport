@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 import { PartnerComponent } from './partner/partner.component';
 
@@ -6,7 +6,7 @@ import { PartnerComponent } from './partner/partner.component';
   selector: 'app-list-partners',
   templateUrl: './list-partners.component.html',
   styleUrls: ['./list-partners.component.scss'],
-  imports: [CommonModule, PartnerComponent],
+  imports: [PartnerComponent],
   standalone: true
 })
 export class ListPartnersComponent implements OnInit {

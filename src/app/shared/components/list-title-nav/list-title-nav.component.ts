@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 import { IPageNavModel } from 'src/app/models/pageNav';
 import { TitleNavComponent } from './title-nav/title-nav.component';
@@ -7,7 +7,7 @@ import { TitleNavComponent } from './title-nav/title-nav.component';
   selector: 'app-list-title-nav',
   templateUrl: './list-title-nav.component.html',
   styleUrls: ['./list-title-nav.component.scss'],
-  imports: [CommonModule, TitleNavComponent],
+  imports: [TitleNavComponent],
   standalone: true
 })
 export class ListTitleNavComponent implements OnInit {

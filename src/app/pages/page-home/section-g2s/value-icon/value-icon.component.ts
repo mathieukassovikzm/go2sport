@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { UiService } from 'src/app/services/ui.service';
 import { SvgCircleComponent } from '../../../../shared/svg/svg-circle/svg-circle.component';
-import { NgIf } from '@angular/common';
+
 import { SvgSolidariteComponent } from '../../../../shared/svg/svg-solidarite/svg-solidarite.component';
 import { SvgPartageComponent } from '../../../../shared/svg/svg-partage/svg-partage.component';
 import { SvgToleranceComponent } from '../../../../shared/svg/svg-tolerance/svg-tolerance.component';
@@ -19,7 +19,7 @@ const svg = [
   selector: 'app-value-icon',
   templateUrl: './value-icon.component.html',
   styleUrls: ['./value-icon.component.scss'],
-  imports: [...svg, NgIf],
+  imports: [...svg],
   standalone: true,
 })
 export class ValueIconComponent implements OnInit {

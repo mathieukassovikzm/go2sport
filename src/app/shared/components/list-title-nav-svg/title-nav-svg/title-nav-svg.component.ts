@@ -1,4 +1,4 @@
-import { CommonModule, ViewportScroller } from '@angular/common';
+import { ViewportScroller } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { IPageNavModel } from 'src/app/models/pageNav';
 import { UiService } from 'src/app/services/ui.service';
@@ -41,7 +41,7 @@ const svgs = [
   selector: 'app-title-nav-svg',
   templateUrl: './title-nav-svg.component.html',
   styleUrls: ['./title-nav-svg.component.scss'],
-  imports: [CommonModule, svgs],
+  imports: [svgs],
   standalone: true,
 })
 export class TitleNavSvgComponent implements OnInit {

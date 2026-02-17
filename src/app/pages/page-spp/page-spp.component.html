@@ -10,9 +10,11 @@
         entretenir physiquement.
       </p>
       <div class="container-flex">
-        <div *ngFor="let element of elements">
-          <app-item-spp [elementSpp]="element"></app-item-spp>
-        </div>
+        @for (element of elements; track element) {
+          <div>
+            <app-item-spp [elementSpp]="element"></app-item-spp>
+          </div>
+        }
       </div>
     </div>
   </section>

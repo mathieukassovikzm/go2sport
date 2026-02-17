@@ -1,11 +1,11 @@
-import { CommonModule } from '@angular/common';
+
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-dotted-line',
   templateUrl: './dotted-line.component.html',
   styleUrls: ['./dotted-line.component.scss'],
-  imports: [CommonModule],
+  imports: [],
   standalone: true
 })
 export class DottedLineComponent implements OnInit {
