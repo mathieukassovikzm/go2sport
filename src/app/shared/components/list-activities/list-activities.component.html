@@ -1,5 +1,5 @@
 <div class="list-activities">
-  @for (activitee of listActivities; track activitee) {
+  @for (activitee of listActivities(); track activitee) {
     <div class="activitee">
       <app-activity [activity]="activitee" />
     </div>

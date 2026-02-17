@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { IActivityModel } from 'src/app/models/activity';
 import { ActivityComponent } from './activity/activity.component';
 
@@ -11,7 +11,7 @@ import { ActivityComponent } from './activity/activity.component';
   standalone: true
 })
 export class ListActivitiesComponent implements OnInit {
-  @Input() listActivities: IActivityModel[] = [];
+  readonly listActivities = input<IActivityModel[]>([]);
   constructor() { }
 
   ngOnInit() { }

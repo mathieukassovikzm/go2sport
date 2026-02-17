@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { IPageNavModel } from 'src/app/models/pageNav';
 import { TitleNavSvgComponent } from './title-nav-svg/title-nav-svg.component';
 
@@ -11,7 +11,7 @@ import { TitleNavSvgComponent } from './title-nav-svg/title-nav-svg.component';
   standalone: true,
 })
 export class ListTitleNavSvgComponent implements OnInit {
-  @Input() listOfTitles: IPageNavModel[] = [];
+  readonly listOfTitles = input<IPageNavModel[]>([]);
 
   constructor() { }
 

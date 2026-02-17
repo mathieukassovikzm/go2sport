@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @Component({
@@ -9,7 +9,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
   standalone: true,
 })
 export class VideoComponent implements OnInit {
-  @Input() videoId = '';
+  readonly videoId = input('');
 
   constructor() { }
 

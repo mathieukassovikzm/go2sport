@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { IStickerModel } from 'src/app/models/sticker';
 
 import { StickerComponent } from './sticker/sticker.component';
@@ -11,7 +11,7 @@ import { StickerComponent } from './sticker/sticker.component';
   standalone: true
 })
 export class ListStickersComponent implements OnInit {
-  @Input() listOfStickers: IStickerModel[] = [];
+  readonly listOfStickers = input<IStickerModel[]>([]);
   constructor() { }
 
   ngOnInit() { }

@@ -1,5 +1,5 @@
 <div class="list-stickers">
-  @for (sticker of listOfStickers; track sticker) {
+  @for (sticker of listOfStickers(); track sticker) {
     <div class="sticker">
       <app-sticker [sticker]="sticker"></app-sticker>
     </div>

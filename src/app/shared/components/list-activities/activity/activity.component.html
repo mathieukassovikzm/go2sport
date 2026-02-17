@@ -20,13 +20,13 @@
         <app-svg-outdoor />
       }
     </div>
-    <h5>{{activity.title}}</h5>
+    <h5>{{activity().title}}</h5>
   </div>
   <!-- <transition name="slide"> -->
   <div [class]="classVignette()" [style.height]="calcHeight()">
     <div class="vignette-text">
       <div class="txt-sports">
-        @for (sport of activity.sports; track sport) {
+        @for (sport of activity().sports; track sport) {
           <div>
             <p class="small">{{sport.name}}</p>
           </div>

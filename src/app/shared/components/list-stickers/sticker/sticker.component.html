@@ -39,8 +39,8 @@
     }
   </div>
   <div class="sticker-txt">
-    <h4>{{sticker.title}}</h4>
-    @for (txt of  sticker.lstTxt; track txt) {
+    <h4>{{sticker().title}}</h4>
+    @for (txt of  sticker().lstTxt; track txt) {
       <div>
         <p>{{txt}}</p>
       </div>

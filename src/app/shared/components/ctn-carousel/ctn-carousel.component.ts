@@ -1,6 +1,6 @@
 import { AnimationEvent } from '@angular/animations';
 
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit, input } from '@angular/core';
 import { fromEvent, Observable, Subject, Subscription } from 'rxjs';
 import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
 import { animationMultipleCarousel } from './animation';
@@ -15,7 +15,7 @@ import { CarouselSlideComponent } from './carousel-slide/carousel-slide.componen
   standalone: true,
 })
 export class CtnCarouselComponent implements OnInit, OnDestroy {
-  @Input() slides: ICarouselSlideModel[] = [];
+  readonly slides = input<ICarouselSlideModel[]>([]);
   private slideWidthTotal = 400; // $slide-width + 2*$slide-side-padding
 
   public evolutingLstSlide: ICarouselSlideModel[] = [];
@@ -48,7 +48,7 @@ export class CtnCarouselComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.onResize();
-    this.evolutingLstSlide = this.slides;
+    this.evolutingLstSlide = this.slides();
   }
 
   ngOnDestroy() {

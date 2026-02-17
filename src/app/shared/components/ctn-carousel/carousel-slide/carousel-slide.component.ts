@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
 
 @Component({
@@ -10,13 +10,13 @@ import { ICarouselSlideModel } from 'src/app/models/carousel-slide';
   standalone: true
 })
 export class CarouselSlideComponent implements OnInit {
-  @Input() dataSlide: ICarouselSlideModel = {};
+  readonly dataSlide = input<ICarouselSlideModel>({});
 
   constructor() { }
 
   ngOnInit() { }
 
   getImgSrc(): string {
-    return `/assets/img/section-trust/${this.dataSlide.logo}`;
+    return `/assets/img/section-trust/${this.dataSlide().logo}`;
   }
 }

@@ -1,5 +1,5 @@
 <div class="list-titles-svg">
-  @for (titleSvg of listOfTitles; track titleSvg) {
+  @for (titleSvg of listOfTitles(); track titleSvg) {
     <div>
       <app-title-nav-svg [titleSvg]="titleSvg"></app-title-nav-svg>
     </div>

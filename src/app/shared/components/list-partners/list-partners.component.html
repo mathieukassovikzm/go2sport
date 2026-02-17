@@ -1,5 +1,5 @@
 <div class="list-partners">
-  @for (partner of listOfPartners; track partner) {
+  @for (partner of listOfPartners(); track partner) {
     <div>
       <app-partner [partner]="partner"></app-partner>
     </div>

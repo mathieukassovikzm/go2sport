@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { PartnerComponent } from './partner/partner.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { PartnerComponent } from './partner/partner.component';
   standalone: true
 })
 export class ListPartnersComponent implements OnInit {
-  @Input() listOfPartners: any;
+  readonly listOfPartners = input<any>();
   constructor() { }
 
   ngOnInit() { }

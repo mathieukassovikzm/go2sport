@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { ITrustModel } from 'src/app/models/partner';
 
 @Component({
@@ -10,12 +10,12 @@ import { ITrustModel } from 'src/app/models/partner';
   standalone: true
 })
 export class PartnerComponent implements OnInit {
-  @Input() partner: ITrustModel = {};
+  readonly partner = input<ITrustModel>({});
   constructor() { }
 
   ngOnInit() { }
 
   getImgSrc(): string {
-    return `/assets/img/section-trust/${this.partner.logo}`;
+    return `/assets/img/section-trust/${this.partner().logo}`;
   }
 }

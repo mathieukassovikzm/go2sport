@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { UiService } from 'src/app/services/ui.service';
 import { SvgCircleComponent } from '../../../../shared/svg/svg-circle/svg-circle.component';
 
@@ -23,7 +23,7 @@ const svg = [
   standalone: true,
 })
 export class ValueIconComponent implements OnInit {
-  @Input() value: any;
+  readonly value = input<any>();
   public isHovered = false;
   public classHovered = 'hovered';
 
@@ -32,42 +32,44 @@ export class ValueIconComponent implements OnInit {
   ngOnInit() { }
 
   isHover() {
-    if (this.value.name === 'Solidarite') {
+    const value = this.value();
+    if (value.name === 'Solidarite') {
       return this.uiService.isHoveredSolidarity;
     }
-    if (this.value.name === 'Partage') {
+    if (value.name === 'Partage') {
       return this.uiService.isHoveredShare;
     }
-    if (this.value.name === 'Tolerance') {
+    if (value.name === 'Tolerance') {
       return this.uiService.isHoveredTolerance;
     }
-    if (this.value.name === 'Convivialite') {
+    if (value.name === 'Convivialite') {
       return this.uiService.isHoveredConviviality;
     }
     return '';
   }
 
   hoverIn(): void {
+    const value = this.value();
     if (
-      this.value.name === 'Solidarite' &&
+      value.name === 'Solidarite' &&
       this.uiService.isHoveredSolidarity == false
     ) {
       this.uiService.isHoveredSolidarity = true;
     }
     if (
-      this.value.name === 'Partage' &&
+      value.name === 'Partage' &&
       this.uiService.isHoveredShare == false
     ) {
       this.uiService.isHoveredShare = true;
     }
     if (
-      this.value.name === 'Tolerance' &&
+      value.name === 'Tolerance' &&
       this.uiService.isHoveredTolerance == false
     ) {
       this.uiService.isHoveredTolerance = true;
     }
     if (
-      this.value.name === 'Convivialite' &&
+      value.name === 'Convivialite' &&
       this.uiService.isHoveredConviviality == false
     ) {
       this.uiService.isHoveredConviviality = true;
@@ -75,26 +77,27 @@ export class ValueIconComponent implements OnInit {
   }
 
   hoverOut(): void {
+    const value = this.value();
     if (
-      this.value.name === 'Solidarite' &&
+      value.name === 'Solidarite' &&
       this.uiService.isHoveredSolidarity == true
     ) {
       this.uiService.isHoveredSolidarity = false;
     }
     if (
-      this.value.name === 'Partage' &&
+      value.name === 'Partage' &&
       this.uiService.isHoveredShare == true
     ) {
       this.uiService.isHoveredShare = false;
     }
     if (
-      this.value.name === 'Tolerance' &&
+      value.name === 'Tolerance' &&
       this.uiService.isHoveredTolerance == true
     ) {
       this.uiService.isHoveredTolerance = false;
     }
     if (
-      this.value.name === 'Convivialite' &&
+      value.name === 'Convivialite' &&
       this.uiService.isHoveredConviviality == true
     ) {
       this.uiService.isHoveredConviviality = false;
@@ -102,18 +105,18 @@ export class ValueIconComponent implements OnInit {
   }
 
   isSolidarite() {
-    return this.value.name === 'Solidarite' ? true : false;
+    return this.value().name === 'Solidarite' ? true : false;
   }
 
   isPartage() {
-    return this.value.name === 'Partage' ? true : false;
+    return this.value().name === 'Partage' ? true : false;
   }
 
   isTolerance() {
-    return this.value.name === 'Tolerance' ? true : false;
+    return this.value().name === 'Tolerance' ? true : false;
   }
 
   isConvivialite() {
-    return this.value.name === 'Convivialite' ? true : false;
+    return this.value().name === 'Convivialite' ? true : false;
   }
 }

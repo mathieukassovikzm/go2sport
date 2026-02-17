@@ -1,5 +1,5 @@
 
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, input } from '@angular/core';
 import { IActivityModel } from 'src/app/models/activity';
 import { SvgCombatComponent } from '../../../svg/svg-combat/svg-combat.component';
 import { SvgFitnessComponent } from '../../../svg/svg-fitness/svg-fitness.component';
@@ -23,7 +23,7 @@ const svgs = [
   standalone: true
 })
 export class ActivityComponent implements OnInit {
-  @Input() activity: IActivityModel = {};
+  readonly activity = input<IActivityModel>({});
 
   public boolTabOpen = true;
   public ctnVignettes;
@@ -41,25 +41,25 @@ export class ActivityComponent implements OnInit {
   }
 
   classVignette() {
-    return `vignette tab-open ${this.activity.url}`;
+    return `vignette tab-open ${this.activity().url}`;
   }
   isEntex() {
-    return this.activity.title === 'Entex' ? true : false;
+    return this.activity().title === 'Entex' ? true : false;
   }
   isFitness() {
-    return this.activity.title === 'Fitness' ? true : false;
+    return this.activity().title === 'Fitness' ? true : false;
   }
   isCombat() {
-    return this.activity.title === 'Combat' ? true : false;
+    return this.activity().title === 'Combat' ? true : false;
   }
   isSportCo() {
-    return this.activity.title === 'Sports collectifs' ? true : false;
+    return this.activity().title === 'Sports collectifs' ? true : false;
   }
   isRaquette() {
-    return this.activity.title === 'Sports Raquettes' ? true : false;
+    return this.activity().title === 'Sports Raquettes' ? true : false;
   }
   isOutdoor() {
-    return this.activity.title === 'Sports plein air' ? true : false;
+    return this.activity().title === 'Sports plein air' ? true : false;
   }
 
   openTab() {
