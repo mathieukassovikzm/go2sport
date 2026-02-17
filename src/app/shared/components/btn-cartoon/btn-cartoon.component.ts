@@ -1,5 +1,5 @@
 
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit, output } from '@angular/core';
 import { SvgArrowsComponent } from '../../svg/svg-arrows/svg-arrows.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { SvgArrowsComponent } from '../../svg/svg-arrows/svg-arrows.component';
   standalone: true
 })
 export class BtnCartoonComponent implements OnInit {
-  @Output() btnClicked = new EventEmitter<string>();
+  readonly btnClicked = output<string>();
 
   constructor() { }
 
